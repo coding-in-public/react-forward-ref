@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import sample from "./components/Sample";
+import Form from "./components/Form";
+import Dialog from "./components/Dialog";
 
 function App() {
   const [name, setName] = useState("");
@@ -23,23 +26,15 @@ function App() {
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Your Name Name</label>
-        <input
-          type="text"
-          ref={inputRef}
-          name="name"
-          id="name"
-          value={name}
-          onInput={(e) => setName(e.currentTarget.value)}
-        />
-        <input type="submit" />
-      </form>
-      <dialog ref={dialogRef}>
-        <h2>Info In here</h2>
+      <Form
+        handleSubmit={handleSubmit}
+        name={name}
+        setName={setName}
+        ref={inputRef}
+      />
+      <Dialog closeModal={closeModal} ref={dialogRef}>
         <p>Your name is {name}</p>
-        <button onClick={closeModal}>Close</button>
-      </dialog>
+      </Dialog>
     </main>
   );
 }
