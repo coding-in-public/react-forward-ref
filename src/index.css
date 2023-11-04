@@ -1,0 +1,28 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
+main {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  background: var(--gradient-2);
+}
+
+form {
+  display: grid;
+  gap: var(--size-2);
+  padding: var(--size-4);
+  background-color: var(--surface-1);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-5);
+}
+
+input {
+  padding-block: var(--size-2);
+}
+
+[type="submit"] {
+  --_accent: var(--violet-5);
+}
