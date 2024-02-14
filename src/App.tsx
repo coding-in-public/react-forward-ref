@@ -30,7 +30,7 @@ function App() {
         handleSubmit={handleSubmit}
         name={name}
         setName={setName}
-        ref={inputRef}
+        inputRef={inputRef}
       />
       <Dialog closeModal={closeModal} ref={dialogRef}>
         <p>Your name is {name}</p>
